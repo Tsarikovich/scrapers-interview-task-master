@@ -1,0 +1,36 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+coverage = "*"
+factory-boy = "*"
+flake8 = "*"
+isort = "*"
+mypy = "*"
+pre-commit = "*"
+pylint = "==3.0.0a3"
+pytest = "*"
+black = "==21.5b2"
+pudb = "*"
+imgkit = "*"
+
+[packages]
+Scrapy = "~=2.6.1"
+scrapy-redis = "==0.7.3"
+fastapi = "~=0.68.0"
+uvicorn = "~=0.21.1"
+pydantic = "==1.9.0"
+Twisted = "==22.10.0"
+aioredis = "*"
+
+[requires]
+python_version = "3.11.0"
+
+[scripts]
+lint = "pre-commit run --all-files"
+unittests = 'python -m twisted.trial -e scrapers.spiders'
+
+[pipenv]
+allow_prereleases = true
